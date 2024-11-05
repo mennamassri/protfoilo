@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap</title>
+
+    <link href="bootstrap.min1.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+    <script src="https://kit.fontawesome.com/179f12c7fe.js" crossorigin="anonymous"></script>
+    
+    <style>
+        body {
+            font-family: "Montserrat", sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background-color: black;
+        }
+
+        .sidebar {
+            height: 100vh;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 100;
+            background-color: #111;
+            padding-top: 20px;
+            transition: all 0.3s;
+        }
+
+        .sidebar a {
+            padding: 16px;
+            font-size: 10px;
+            color: #fff;
+            display: block;
+            text-align: center;
+            text-decoration: none;
+        }
+
+        .sidebar a:hover {
+            background-color: #575757;
+        }
+
+        .siderow {
+            font-size: 20px;
+            color: #fff;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 100;
+            opacity: 0.6;
+            text-align: center;
+            justify-content: center;
+        }
+
+        .siderow a {
+            padding: 9px;
+            margin: 0px 20px;
+            font-size: 14px;
+            color: #fff;
+            text-align: center;
+            text-decoration: none;
+        }
+
+        .siderow a:hover {
+            background-color: #575757;
+
+        }
+
+        .siderow:hover {
+            opacity: 1;
+        }
+
+        .content {
+            margin-left: 0;
+            padding: 20px;
+            transition: margin-left 0.3s;
+        }
+
+
+        @media screen and (max-width: 768px) {
+            .sidebar {
+                left: -250px;
+            }
+
+
+            .all {
+                margin-left: 0;
+            }
+        }
+
+        @media screen and (min-width: 768px) {
+            .sidebar {
+                left: 0;
+            }
+
+            .all {
+                margin-left: 120px;
+            }
+        }
+
+
+
+        .intro h1 {
+            font-size: 55px;
+            color: whitesmoke;
+            margin-top: 5rem;
+        }
+
+        .intro h5 {
+            color: rgb(189, 189, 189);
+            font-size: medium;
+        }
+
+        .About {
+            color: whitesmoke;
+        }
+
+        .text-justify {
+            text-align: justify;
+        }
+
+        .center {
+            text-align: center;
+        }
+
+        .download {
+            border: 0;
+        }
+
+        .download:hover {
+            background-color: #575757;
+        }
+
+        .border-bottom {
+            border-bottom: 2px solid;
+        }
+
+        .opacity {
+            opacity: 0.5;
+        }
+
+        .opacity:hover {
+            opacity: 1;
+        }
+
+        .reputation-img {
+            border-radius: 50%;
+            width: 100px;
+        }
+
+        .my-photos img {
+            width: 100%;
+            object-fit: cover;
+        }
+
+        .my-photos .col-6 {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <div class="sidebar p-0 m-0 " id="sidebar">
+        <img class="img-fluid  p-0 m-0" style="width:8rem" src="./img/avatar_smoke.jpg">
+        <a href="#"><i class="fa-solid fa-house-chimney fs-1 my-3 d-block" style="color: #ffffff;"></i> Home</a>
+        <a onclick="document.getElementById('about').scrollIntoView({ behavior: 'smooth' });" style="color: #ffffff;"><i class="fa-solid fa-user fs-1 d-block my-3" style="color: #ffffff;"></i>About</a>
+        <a  onclick="document.getElementById('photos').scrollIntoView({ behavior: 'smooth' });" style="color: #ffffff;"><i class="fa-solid fa-image fs-1 my-3 d-block " style="color: #ffffff;"></i> Photos</a>
+        <a  onclick="document.getElementById('email').scrollIntoView({ behavior: 'smooth' });" style="color: #ffffff;"><i class="fa-solid fa-envelope fs-1 my-3 d-block" style="color: #ffffff;"></i>Email</a>
+   
+    </div>
+
+    <div class="all">
+        <div class="content p-0 m-0">
+            <div class="siderow bg-dark d-md-none w-100 d-flex flex-row">
+                <a href="#"> Home</a>
+                <a onclick="document.getElementById('about').scrollIntoView({ behavior: 'smooth' });"></i>About</a>
+                <a onclick="document.getElementById('photos').scrollIntoView({ behavior: 'smooth' });" > Photos</a>
+                <a onclick="document.getElementById('email').scrollIntoView({ behavior: 'smooth' });"></i>Email</a>
+            </div>
+            <div id="home" class="intro d-flex flex-column text-center ">
+                <h1><span class="d-none d-md-inline">I'm</span> John Doe</h1>
+                <h5>Photographer and Web Designer.</h5>
+            </div>
+            <img class="container-fluid img-fluid p-0 m-0" src="./img/man_smoke.jpg">
+            <div id="about" class="About mt-5">
+                <h2 class="px-4">My Name</h2>
+                <hr class="mx-4" style="width: 50%;">
+                <p class="p px-4 text-justify">Some text about me. Some text about me. I am lorem ipsum consectetur
+                    adipiscing
+                    elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+                    ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+                    commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                    proident, sunt in culpa qui officia deserunt mollit anim id est laborum consecte
+                    tur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
+                    aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                    nisi ut aliquip ex ea commodo consequat.</p>
+
+                <h2 class="px-4 my-4 mt-5">My Skills </h2>
+                <hr class="mx-4" style="width: 50%;">
+                <div class="m-5">
+                    <div>
+                        <div class="d-flex flex-column ">
+                            <p class="fs-5 " style="color: #575757;"> Photography</p>
+                            <div class="d-flex" style="background-color: whitesmoke; width: 100% ; height: 28px;">
+                                <div style="background-color: #575757; width: 95%;"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="d-flex flex-column">
+                            <p class="fs-5 p-2 pt-4" style="color: #575757;"> Web Design</p>
+                            <div class="d-flex " style="background-color: whitesmoke; width: 100% ; height: 28px;">
+                                <div style="background-color: #575757; width: 85%;"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="d-flex flex-column  ">
+                        <p class="fs-5 p-2  pt-4" style="color: #575757;"> Photoshop</p>
+                        <div class="d-flex " style="background-color: whitesmoke; width: 100% ; height: 28px;">
+                            <div style="background-color: #575757; width: 80%;"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="d-flex flex-column flex-md-row justify-content-center align-items-center bg-light m-5">
+                <div class="p-4 text-center fs-5">
+                    <h5>11+</h5> Partners
+                </div>
+                <div class="p-4 text-center fs-5 ">
+                    <h5>55+</h5>Projects Done
+                </div>
+                <div class="p-4 text-center fs-5 ">
+                    <h5>89+</h5>Happy Clients
+                </div>
+                <div class="p-4 text-center fs-5">
+                    <h5>150+</h5>Meetings
+                </div>
+            </div>
+            <button class="download btn-light p-3 px-4 m-5 mt-3"><i class="fa fa-download p-2"></i> Download Resume
+            </button>
+            <div class="offer d-flex  flex-column flex-md-row m-5 ">
+                <div class="col-12 col-md-6 d-flex flex-column m-2 opacity opacity:hover">
+                    <div class=" p-4  text-center" style="background-color: #575757; color: whitesmoke;">Basic</div>
+                    <div class=" p-2 bg-light text-center border-bottom ">Web Design</div>
+                    <div class=" p-2 bg-light text-center border-bottom">Photography</div>
+                    <div class="p-2 bg-light text-center border-bottom">5GB Storage</div>
+                    <div class="p-2 bg-light text-center border-bottom">Mail Support</div>
+                    <div class="p-4 bg-light text-center border-bottom">
+                        <h2>$ 10</h2> per month
+                    </div>
+                    <div class="p-4  text-center" style="background-color: #f1f1f1;"><button class="btn btn-light">Sing
+                            Up</button></div>
+                </div>
+
+                <div class="col-12 col-md-6 d-flex flex-column m-2 opacity opacity:hover ">
+                    <div class=" p-4  text-center" style="background-color: #575757; color: whitesmoke;">Basic</div>
+                    <div class=" p-2 bg-light text-center border-bottom ">Web Design</div>
+                    <div class=" p-2 bg-light text-center border-bottom">Photography</div>
+                    <div class="p-2 bg-light text-center border-bottom">50GB Storage</div>
+                    <div class="p-2 bg-light text-center border-bottom">Endless Support</div>
+                    <div class="p-4 bg-light text-center border-bottom">
+                        <h2>$ 25</h2> per month
+                    </div>
+                    <div class="p-4  text-center" style="background-color: #f1f1f1;"><button class="btn btn-light">Sing
+                            Up</button></div>
+                </div>
+
+
+            </div>
+            <div class="m-5" style="color: whitesmoke;">
+                <h2>My Reputation</h2>
+                <div class="d-flex flex-row">
+                    <img class="reputation-img m-3" src="./img/bandmember.jpg">
+                    <div class="mt-4" style="color: #707070;">
+                        <p>Chris Fox. CEO at Mighty Schools.</p>
+                        <p>John Doe saved us from a web disaster.</p>
+                    </div>
+                </div>
+                <div class="d-flex flex-row">
+                    <img class="reputation-img m-3" src="./img//avatar_g2.jpg">
+                    <div class="mt-4" style="color: #707070;">
+                        <p>Rebecca Flex. CEO at Company.</p>
+                        <p>John Doe saved us from a web disaster.</p>
+                        -
+                    </div>
+                </div>
+            </div>
+
+            <div id="photos" class="my-photos mt-5 m-5  " style="color: whitesmoke;">
+                <h2 class="px-4 my-4 mt-5">My Photos</h2>
+                <hr class="mx-4" style="width: 50%;">
+                <div class=" gap-3 d-flex flex-row ">
+                    <div class="col-6 d-flex flex-column gap-3">
+                        <img class="img-fluid" src="./img/wedding.jpg">
+                        <img class="img-fluid" src="./img/rocks.jpg">
+                        <img class="img-fluid" src="./img/sailboat.jpg">
+                    </div>
+                    <div class="col-6 d-flex flex-column gap-3">
+                        <img class="img-fluid" src="./img/underwater.jpg">
+                        <img class="img-fluid" src="./img/chef.jpg">
+                        <img class="img-fluid" src="./img/wedding (1).jpg">
+                        <img class="img-fluid" src="./img/p6.jpg">
+                    </div>
+                </div>
+            </div>
+            <div id="email" class="contact-me my-photos mt-5 m-5  " style="color: whitesmoke;">
+                <h2>Contact Me</h2>
+                <div class="d-flex flex-column">
+                    <p style="color: #707070;"><i
+                            class="fa fa-map-marker fa-fw w3-text-white w3-xxlarge w3-margin-right m-2"></i> Chicago, US
+                    </p>
+                    <p style="color: #707070;"><i
+                            class="fa fa-phone fa-fw w3-text-white w3-xxlarge w3-margin-right m-2"></i> Phone: +00
+                        151515</p>
+                    <p style="color: #707070;"><i
+                            class="fa fa-envelope fa-fw w3-text-white w3-xxlarge w3-margin-right m-2"> </i> Email:
+                        mail@mail.com</p>
+                </div>
+            </div>
+            <div  class="mt-5 m-5">
+                <div class=" d-flex flex-column">
+                    <p style="color: #ffffff;">Let's get in touch. Send me a message:</p>
+                    <input class="p-3 m-2 my-3" type="text" placeholder="Name" name="name">
+                    <input class="p-3 m-2 my-3" type="email" placeholder="Email" name="email">
+                    <input class="p-3 m-2 my-3" type="text" placeholder="Subject" name="subject">
+                    <input class="p-3 m-2 my-3" type="text" placeholder="Message" name="message">
+                </div>
+
+                <button class="btn btn-light m-2 p-2 my-3  "><i class="fa fa-paper-plane p-2"></i>SEND MESSAGE </button>
+            </div>
+
+
+            <footer class=" m-5 fs-3 p-3">
+                <i class="fa fa-facebook-official w3-hover-opacity"></i>
+                <i class="fa fa-instagram w3-hover-opacity"></i>
+                <i class="fa fa-snapchat w3-hover-opacity"></i>
+                <i class="fa fa-pinterest-p w3-hover-opacity"></i>
+                <i class="fa fa-twitter w3-hover-opacity"></i>
+                <i class="fa fa-linkedin w3-hover-opacity"></i>
+            </footer>
+        </div>
+    </div>
+
+</body>
+
+</html>
